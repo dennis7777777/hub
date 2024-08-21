@@ -31,18 +31,40 @@ local Window = Rayfield:CreateWindow({
     }
 })
 
--- Adjust UI settings for all elements except the main window
-local function adjustUI(element)
-    if element ~= Window then
-        element.Mobile = {
-            Enabled = true,
-            Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
-            Offset = {0, -50} -- Offset of the UI (x, y)
-        }
-    end
-end
+-- Create new tabs with adjusted mobile settings
+local Tab1 = Rayfield:CreateTab(Window, {
+    Name = "Tab 1",
+    Mobile = {
+        Enabled = true,
+        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -50} -- Offset of the UI (x, y)
+    }
+})
 
--- Apply the adjustment function to all UI elements
-for _, element in pairs(Rayfield:GetElements()) do
-    adjustUI(element)
-end
+local Tab2 = Rayfield:CreateTab(Window, {
+    Name = "Tab 2",
+    Mobile = {
+        Enabled = true,
+        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -50} -- Offset of the UI (x, y)
+    }
+})
+
+-- Create new sections with adjusted mobile settings
+local Section1 = Rayfield:CreateSection(Tab1, {
+    Name = "Section 1",
+    Mobile = {
+        Enabled = true,
+        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -50} -- Offset of the UI (x, y)
+    }
+})
+
+local Section2 = Rayfield:CreateSection(Tab2, {
+    Name = "Section 2",
+    Mobile = {
+        Enabled = true,
+        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -50} -- Offset of the UI (x, y)
+    }
+})
