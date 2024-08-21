@@ -1,4 +1,4 @@
-local Window = ArrayField:CreateWindow({
+local Window = CreateWindow({
    Name = "ArrayField Example Window",
    LoadingTitle = "ArrayField Interface Suite",
    LoadingSubtitle = "by Arrays",
