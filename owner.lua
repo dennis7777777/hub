@@ -22,11 +22,11 @@ local Window = Rayfield:CreateWindow({
        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
        SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = {"dev23"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+       Key = {"dev24"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     },
     Mobile = {
         Enabled = true, -- Enable mobile support
-        Scale = 1, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Scale = 0.5, -- Scale of the UI (1 is default, 0.5 would be half size)
         Offset = {0, 0} -- Offset of the UI (x, y)
     }
 })
@@ -36,8 +36,8 @@ local Tab1 = Rayfield:CreateTab(Window, {
     Name = "Tab 1",
     Mobile = {
         Enabled = true,
-        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
-        Offset = {0, -50} -- Offset of the UI (x, y)
+        Scale = 0.4, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -20} -- Offset of the UI (x, y)
     }
 })
 
@@ -45,8 +45,8 @@ local Tab2 = Rayfield:CreateTab(Window, {
     Name = "Tab 2",
     Mobile = {
         Enabled = true,
-        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
-        Offset = {0, -50} -- Offset of the UI (x, y)
+        Scale = 0.4, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -20} -- Offset of the UI (x, y)
     }
 })
 
@@ -55,8 +55,8 @@ local Section1 = Rayfield:CreateSection(Tab1, {
     Name = "Section 1",
     Mobile = {
         Enabled = true,
-        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
-        Offset = {0, -50} -- Offset of the UI (x, y)
+        Scale = 0.4, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -20} -- Offset of the UI (x, y)
     }
 })
 
@@ -64,7 +64,7 @@ local Section2 = Rayfield:CreateSection(Tab2, {
     Name = "Section 2",
     Mobile = {
         Enabled = true,
-        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
-        Offset = {0, -50} -- Offset of the UI (x, y)
+        Scale = 0.4, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -20} -- Offset of the UI (x, y)
     }
 })
