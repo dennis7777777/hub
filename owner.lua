@@ -14,14 +14,19 @@ local Window = Rayfield:CreateWindow({
        Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
        RememberJoins = true -- Set this to false to make them join the discord every time they load it up
     },
-    KeySystem = false, -- Set this to true to use our key system
+    KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Untitled",
+       Title = "Key System",
        Subtitle = "Key System",
-       Note = "No method of obtaining the key is provided",
+       Note = "Get key from dev",
        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
        SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+       Key = {"dev24"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    },
+    Mobile = {
+        Enabled = true, -- Enable mobile support
+        Scale = 1, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, 0} -- Offset of the UI (x, y)
     }
- })
+})
