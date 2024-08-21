@@ -26,7 +26,12 @@ local Window = Rayfield:CreateWindow({
     },
     Mobile = {
         Enabled = true, -- Enable mobile support
-        Scale = 1, -- Scale of the UI (1 is default, 0.5 would be half size)
-        Offset = {0, 0} -- Offset of the UI (x, y)
+        Scale = 0.7, -- Scale of the UI (1 is default, 0.5 would be half size)
+        Offset = {0, -50} -- Offset of the UI (x, y)
     }
 })
+
+-- Mobile-specific settings
+Window:SetSize(UDim2.new(0, 300, 0, 400)) -- Set the window size to 300x400 pixels
+Window:SetPosition(UDim2.new(0, 0, 0, 0)) -- Set the window position to the top-left corner
+Window:SetBackgroundTransparency(0.5) -- Set the background transparency to 50%
