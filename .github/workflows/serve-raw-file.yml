@@ -1,0 +1,23 @@
+name: Serve raw file
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'File to serve'
+        required: true
+        default: 'main.lua'
+
+jobs:
+  serve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Serve raw file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Serving ${{ inputs.file }}..."
+          cat ${{ inputs.file }} | gzip -c
+          exit 0
