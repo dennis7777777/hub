@@ -1,13 +1,13 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "My_first_hub",
-   LoadingTitle = "Streetz war 2 hub",
-   LoadingSubtitle = "by Hamburgstatus",
+   Name = "Rayfield Example Window",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
    ConfigurationSaving = {
-      Enabled = false,
+      Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
+      FileName = "my first hub"
    },
    Discord = {
       Enabled = false,
@@ -16,29 +16,12 @@ local Window = Rayfield:CreateWindow({
    },
    KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
-      Title = "My_first_hub Key system",
+      Title = "Untitled",
       Subtitle = "Key System",
       Note = "No method of obtaining the key is provided",
-      FileName = "My_first_key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"dev24","key22"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-
-local MainTab = Window:CreateTab("Home", nil) -- Title, Image
-local MainSection = MaimTab:CreateSection("Main")
-
-Rayfield:Notify({
-   Title = "You executed the script",
-   Content = "very good gui",
-   Duration = 5,
-   Image = nil,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay!",
-         Callback = function()
-         print("The user tapped Okay!")
-      end
-   },
-},
